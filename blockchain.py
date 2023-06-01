@@ -14,20 +14,6 @@ from pycoin.ecdsa import generator_secp256k1, sign, verify
 import matplotlib
 matplotlib.use('Agg')
 
-#setting url to home
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Building a Blockchain
@@ -360,6 +346,7 @@ def profile():
         return render_template('profile.html', account=account)
     else:
         return redirect(url_for('home'))
+    
 # Getting the full Blockchain
 
 
@@ -387,6 +374,7 @@ def get_chain():
         return render_template('viewtransaction.html', response=resp[0])
     else:
         return redirect(url_for('home'))
+    
 # Checking if the Blockchain is valid
 
 
